@@ -1,6 +1,6 @@
 set nocompatible
 filetype off " weird vundle req, we'll return this
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -12,5 +12,4 @@ Bundle "xolox/vim-easytags"
 " color schemes
 Bundle "w0ng/vim-hybrid"
 
-filetype plugin indent on " see, we did return back to normal
-
+filetype plugin indent on " see, we did return back to normal 
