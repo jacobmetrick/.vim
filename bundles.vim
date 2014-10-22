@@ -12,4 +12,7 @@ Bundle "xolox/vim-easytags"
 " color schemes
 Bundle "w0ng/vim-hybrid"
 
-filetype plugin indent on " see, we did return back to normal 
+" Comments
+Bundle "tpope/vim-commentary"
+
+filetype plugin indent on " see, we did return back to normal
