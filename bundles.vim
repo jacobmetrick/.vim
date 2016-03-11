@@ -1,18 +1,13 @@
-set nocompatible
-filetype off " weird vundle req, we'll return this
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
+call plug#begin('~/.vim/plugged')
 
 " install easy tags to manage tags
-Bundle "xolox/vim-misc"
-Bundle "xolox/vim-easytags"
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
 
 " color schemes
-Bundle "w0ng/vim-hybrid"
+Plug 'w0ng/vim-hybrid'
 
 " Comments
-Bundle "tpope/vim-commentary"
+Plug 'tpope/vim-commentary'
 
-filetype plugin indent on " see, we did return back to normal
+call plug#end()
