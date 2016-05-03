@@ -1,1 +1,1 @@
-/home/jmetrick/.vimrc
+vimrc
