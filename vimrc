@@ -22,6 +22,7 @@ if has("autocmd") " some vim compilations don't have autocmd
     filetype on " required by below
     "reverts to tab characters in makefiles
     autocmd FileType make setlocal ts=4 sts=4 sw=4 noet
+    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 et
 endif
 autocmd BufWritePre * :%s/\s\+$//e " auto-remove trailing whitespace on write.
 
