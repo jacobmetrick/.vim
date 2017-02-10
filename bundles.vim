@@ -10,6 +10,9 @@ if has('nvim')
     let g:deoplete#enable_at_startup = 1
 endif
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
 Plug 'benekastah/neomake'
 
 " color schemes
