@@ -1,19 +1,25 @@
 call plug#begin('~/.vim/plugged')
 
-" install easy tags to manage tags (disabled; should run async!)
-" Plug 'xolox/vim-misc'
-" Plug 'xolox/vim-easytags'
-
 " completion plugin
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim'
-    let g:deoplete#enable_at_startup = 1
+if has("nvim-0.2.2") && has("python3")
+    Plug 'ncm2/ncm2'
+    Plug 'roxma/nvim-yarp'
+
+    autocmd BufEnter * call ncm2#enable_for_buffer()
+    set completeopt=noinsert,menuone,noselect
+
+    Plug 'ncm2/ncm2-bufword'
+    Plug 'ncm2/ncm2-path'
+
+    Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': 'bash install.sh',
+        \ }
 endif
 
+" fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-
-Plug 'benekastah/neomake'
 
 " color schemes
 Plug 'w0ng/vim-hybrid'
